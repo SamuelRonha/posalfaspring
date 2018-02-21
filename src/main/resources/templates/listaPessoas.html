@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listar Pessoas</title>
+</head>
+<body>
+<!--/*@thymesVar id="pessoa" type="com.pos.alfa.model.Pessoa"*/-->
+<!--/*@thymesVar id="pessoas" type="java.util.List<com.pos.alfa.model.Pessoa>"*/-->
+<div>
+    <table class="table table-bordered">
+        <thead>
+        <th>Nome</th>
+        <th>Conta</th>
+        <th>Agencia</th>
+        <th>Quantidade em Conta</th>
+        <th>Login</th>
+        </thead>
+        <tbody th:object="${pessoas}">
+        <tr th:each="pessoa: ${pessoas}">
+            <td th:text="${pessoa.nome}"></td>
+            <td th:text="${pessoa.contaBancaria.conta}"></td>
+            <td th:text="${pessoa.contaBancaria.agencia}"></td>
+            <td th:text="${pessoa.contaBancaria.quantidade}"></td>
+            <td th:text="${pessoa.login}"></td>
+            <br/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+<br/>
+<a href="/">Voltar ao inicio</a>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Pos Alfa 2017</title>
+</head>
+<body>
+<a href="/pessoa">Cadastro</a>
+<a href="/pessoas">Listar pessoas</a>
+<a href="/acao">Debitar/Creditar</a>
+<a sec:authorize="isAuthenticated()" href="/logout">Logout</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cadastro Conta Bancária</title>
+</head>
+<body>
+<div>
+    <select>
+        <option value="nenhum">Selecione uma pessoa</option>
+        <!--/*@thymesVar id="pessoas" type="java.util.Collection<com.pos.alfa.model.Pessoa>"*/-->
+        <!--/*@thymesVar id="pessoa" type="com.pos.alfa.model.Pessoa"*/-->
+        <option th:each="pessoa : ${pessoas}" th:value="${pessoa.email}" th:text="${pessoa.nome}"></option>
+    </select>
+</div>
+</body>
+</html>
